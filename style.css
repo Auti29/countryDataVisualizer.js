@@ -1,0 +1,142 @@
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+header{
+    background-color: rgb(243, 242, 200);
+    /* display: inline-block; */
+    width: 50%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+    border-bottom: 2px solid black;
+    box-shadow: 5px 10px 5px;
+}
+header h2{
+    letter-spacing: 5px;
+    font-weight: 600;
+    font-size: 30px;
+}
+header .subtitle{
+    text-align: center;
+    height: 30px;
+    width: 40%;
+    border: 2px solid black;
+    border-radius: 7px;
+    box-shadow: 5px 5px 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+main{
+    height: 500px;
+    width: 50%;
+    border: 2px solid black;
+    background-color: rgb(222, 219, 219);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main h4{
+    text-align: center;
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 2px solid #000;
+    box-shadow: 2px 2px 2px;
+}
+.graph-buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid black; */
+    width: 700px;
+    box-shadow: 5px 5px 5px 5px;
+    margin-top: 5px;
+    padding: 5px;
+}
+/* .graph-buttons button{
+    background-color: black;
+    color: white;
+    margin: 5px;
+    font-size: 15px;
+    padding: 5px;
+}
+.graph-buttons button:hover{
+    background-color: white;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+} */
+.button {
+    margin: 7px;
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.button:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.button:active {
+    color: #000
+}
+.button:hover{
+    font-size: 16px;
+    font-family: 'Poppins', serif;
+    font-style: italic;
+    font-weight: 600;
+}
+.button:active:after {
+    background: transparent;
+}
+
+.button:hover:before {
+    opacity: 1;
+}
+
+.button:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+.display{
+    display: none;
+}
